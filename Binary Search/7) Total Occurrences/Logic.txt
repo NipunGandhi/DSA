@@ -1,0 +1,1 @@
+Find Index of First Occurrence and Last occurrence and calculate the gap
