@@ -1,16 +1,17 @@
 class Solution {
 public:
-    void dfs(TreeNode* root, vector<int>& ans, int level){
-        if(root == NULL) return;
-        if(level+1 > ans.size()) ans.push_back(0);
-        ans[level] = root->val;
-        dfs(root->left, ans, level+1);
-        dfs(root->right, ans, level+1);
+    void traverse(TreeNode* root, vector<int>& ans, int level){
+      if(root == NULL) return;
+      if(ans.size() == level){
+        ans.push_back(root->val);
+      } else ans[level] = root->val;
+      traverse(root->left, ans, level+1);
+      traverse(root->right, ans, level+1);
     }
 
     vector<int> rightSideView(TreeNode* root) {
         vector<int> ans;
-        dfs(root,ans,0);
+        traverse(root, ans, 0);
         return ans;
     }
 };
