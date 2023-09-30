@@ -1,0 +1,48 @@
+class Solution {
+public:
+    bool recursive(TreeNode* root, TreeNode* p, TreeNode* q, bool& t1, bool& t2,  stack<pair<TreeNode*, bool>>& s){
+        if(root == NULL) return false;
+        if(root == p || root == q){
+            if(t1 && t2) return true;
+            s.push({root,true});
+            if(!t1) t1 = true;
+            else t2 = true;
+        } else {
+            s.push({root,false});
+        }
+        
+        bool left = false;
+        bool right = false;
+
+        if(!t1 || !t2){
+            left = recursive(root->left, p, q, t1, t2, s);
+            if(root->left && (!t1 || !t2)) s.pop();             
+        } 
+
+        if(!t1 || !t2){
+            right = recursive(root->right, p, q, t1, t2, s);
+            if(root->right && (!t1 || !t2)) s.pop();            
+        } 
+        
+        if(left || right){
+            cout << root->val << " " <<s.size()<<endl;
+            s.pop();
+            s.push({root, true});
+        }
+        if(t1 && t2) return false;
+        return s.top().second;
+    }
+
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        stack<pair<TreeNode*, bool>> s;
+        bool t1 = false, t2 = false;
+        recursive(root,p,q,t1,t2,s);
+        TreeNode* ans;
+        while(!s.empty()){
+            cout << s.top().first->val <<endl; 
+            if(s.top().second) ans = s.top().first;
+            s.pop();
+        }
+        return ans;        
+    }
+};
