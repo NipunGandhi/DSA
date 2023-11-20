@@ -1,0 +1,23 @@
+Contest Upsolve (12)
+
+Biweekly 112
+https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-ii
+https://leetcode.com/problems/count-k-subsequences-of-a-string-with-maximum-beauty
+https://leetcode.com/problems/maximum-sum-of-almost-unique-subarray (Alreay solved but want to solve for practive)
+
+Biweekly 113
+https://leetcode.com/problems/minimum-array-length-after-pair-removals
+https://leetcode.com/problems/count-pairs-of-points-with-distance-k
+https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable
+
+Biweekly 114
+https://leetcode.com/problems/split-array-into-maximum-number-of-subarrays
+https://leetcode.com/problems/maximum-number-of-k-divisible-components
+
+Weekly 370
+https://leetcode.com/problems/maximum-balanced-subsequence-sum/
+
+Biweekly 117
+https://leetcode.com/problems/distribute-candies-among-children-ii
+https://leetcode.com/problems/number-of-strings-which-can-be-rearranged-to-contain-substring
+https://leetcode.com/problems/maximum-spending-after-buying-items
